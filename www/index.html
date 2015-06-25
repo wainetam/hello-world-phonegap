@@ -29,7 +29,7 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
     </head>
-    <body>
+    <body onload="init()">
         <div class="app">
             <h1>PhoneGap</h1>
             <div id="deviceready" class="blink">
@@ -39,8 +39,19 @@
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/signalpg.js"></script>
         <script type="text/javascript">
             app.initialize();
+            alert("we are an app");
+
+<!--            function init() {-->
+<!--                alert("we are an app");-->
+<!--                document.addEventListener("deviceready", onDeviceReady, false);-->
+<!--            }-->
+<!---->
+<!--            function onDeviceReady() {-->
+<!--                alert("we are an app");-->
+<!--            }-->
         </script>
     </body>
 </html>
