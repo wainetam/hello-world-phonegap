@@ -4,8 +4,23 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {}
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/widget/plugins": [
+                        {
+                            "xml": "<feature name=\"SignalPG\"><param name=\"ios-package\" value=\"SignalPG\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
     },
-    "installed_plugins": {},
+    "installed_plugins": {
+        "com.signal360.SignalPGPlugin": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        }
+    },
     "dependent_plugins": {}
 }

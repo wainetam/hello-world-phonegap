@@ -25,6 +25,7 @@ var SignalPG = {
 	 * @param option boolean for sdk to prevent os popups
 	 */
 	initialize: function (applicationGuid, option) {
+        alert('in init function');
 		if (applicationGuid && typeof applicationGuid === "string") {
 			if (option && typeof option === "boolean") {
 					cordova.exec (null, null, "SignalPG", "initialize", [applicationGuid, option]);

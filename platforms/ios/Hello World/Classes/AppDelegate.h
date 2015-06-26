@@ -28,8 +28,10 @@
 #import <UIKit/UIKit.h>
 
 #import <Cordova/CDVViewController.h>
+#import <SignalUI/SignalShared.h>
+#import <SignalUI/SignalUI.h>
 
-@interface AppDelegate : NSObject <UIApplicationDelegate>{}
+@interface AppDelegate : NSObject <UIApplicationDelegate, SignalUIDelegate>{}
 
 // invoke string is passed to your app on launch, this is only valid if you
 // edit Hello World-Info.plist to add a protocol

@@ -29,9 +29,9 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
     </head>
-    <body>
+    <body onload="init()">
         <div class="app">
-            <h1>HELLO</h1>
+            <h1>HEY NOW</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
@@ -42,16 +42,17 @@
         <script type="text/javascript" src="js/signalpg.js"></script>
         <script type="text/javascript">
             app.initialize();
-            alert("we are an app");
             
-            <!--            function init() {-->
-                <!--                alert("we are an app");-->
-                <!--                document.addEventListener("deviceready", onDeviceReady, false);-->
-                <!--            }-->
-        <!---->
-        <!--            function onDeviceReady() {-->
-            <!--                alert("we are an app");-->
-            <!--            }-->
+            function init() {
+                SignalPG.initialize("035af909-caee-455d-8640-d9b9c5f9e0b7");
+                
+                SignalPG.start(); // checked
+                SignalPG.isBluetoothEnabled(); // checked
+                
+<!--                setTimeout(function(){-->
+<!--                }, 5000);-->
+<!--                -->
+            }
         </script>
     </body>
 </html>

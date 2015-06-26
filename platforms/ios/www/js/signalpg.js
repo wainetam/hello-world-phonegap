@@ -1,8 +1,9 @@
-var cordova = require('cordova');
-
 var SignalPG = {
 
-	didHearCodeCB: null,
+didHearCodeCB: function(code) {
+    alert('didhearcode')
+    alert(code);
+},
 
 	didReceiveActivationsCB: null,
 
@@ -29,9 +30,9 @@ var SignalPG = {
 	initialize: function (applicationGuid, option) {
 		if (applicationGuid && typeof applicationGuid === "string") {
 			if (option && typeof option === "boolean") {
-					cordova.exec (null, null, "SignalPG", "initialize", [applicationGuid, option]);
+                cordova.exec(null, null, "SignalPG", "initialize", [applicationGuid, option]);
 			} else {
-					cordova.exec (null, null, "SignalPG", "initialize", [applicationGuid]);
+                cordova.exec(null, null, "SignalPG", "initialize", [applicationGuid]);
 			}
 		}
 	},
@@ -40,7 +41,7 @@ var SignalPG = {
 	 * Start, this is for both Bluetooth and Audio. If you are interested in one or the other this can be configured via the CMS.
 	 */
 	start: function () {
-		cordova.exec (null, null, "SignalPG", "start", []);
+        cordova.exec (null, null, "SignalPG", "start", []);
 	},
 
 	/**
@@ -114,7 +115,7 @@ var SignalPG = {
 	 */
 	setCustomerIdentifier: function (customerIdentifier) {
 		if (customerIdentifier && typeof customerIdentifier === "string") {
-			cordova.exec (null, null, "SignalPG", "reset", [setCustomerIdentifier]);
+			cordova.exec (null, null, "SignalPG", "setCustomerIdentifier", [customerIdentifier]);
 		}
 	},
 
